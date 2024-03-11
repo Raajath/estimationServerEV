@@ -9,30 +9,30 @@ describe('Post estimated charging time (in hours) from SOC,batteryCapacity,conne
     const batteryInput = {
       soc: 50,
       batteryCapacity: 40,
-      connectorPower: 10,
+      connectorPowerKWH: 10,
     };
 
     const estimatedResponse = await request(app)
         .post('/estimate')
         .send(batteryInput)
         .expect(200);
-    expect(estimatedResponse.body.expectedTime).to.equals(2);
+    expect(estimatedResponse.body.expectedTimeHours).to.equals(2);
   });
 
   it('Should give 400 status and error for bad requests', async () => {
     const batteryInput =[{},
       {
         batteryCapacity: 40,
-        connectorPower: 10,
+        connectorPowerKWH: 10,
       },
       {
         batteryCapacity: 40,
-        connectorPower: 10,
+        connectorPowerKWH: 10,
       },
       {
         soc: '50',
         batteryCapacity: 'hdf',
-        connectorPower: 'dc',
+        connectorPowerKWH: 'dc',
       },
 
     ];
