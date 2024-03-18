@@ -1,11 +1,9 @@
-# These are some examples of commonly ignored file patterns.
-# You should customize this list as applicable to your project.
-# Learn more about .gitignore:
-#     https://www.atlassian.com/git/tutorials/saving-changes/gitignore
-
-# Node artifact files
+#folders
 node_modules/
 dist/
+test/
+gates/
+.github/
 
 # Test artifacts
 coverage
@@ -13,6 +11,8 @@ coverage
 reports
 *.stryker-tmp
 
+.eslintrc.json
+checkmycode.sh
 # Compiled Java class files
 *.class
 
@@ -53,6 +53,4 @@ Thumbs.db
 *.flv
 *.mov
 *.wmv
-
-
 

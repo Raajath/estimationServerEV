@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  estimate:
+    container_name: estimate
+    build: .
+    ports:
+      - 5000:5000
+    networks:
+      - asset_network
+
+networks:
+  asset_network:
+    driver: bridge
+
+
