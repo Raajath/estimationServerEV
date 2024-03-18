@@ -12,5 +12,6 @@ services:
 networks:
   asset_network:
     driver: bridge
+    external: true
 
 
