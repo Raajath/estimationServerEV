@@ -7,10 +7,10 @@ services:
     ports:
       - 5000:5000
     networks:
-      - asset_network
+      - dockeriseevsetup_asset_network
 
 networks:
-  asset_network:
+  dockeriseevsetup_asset_network:
     external: true
 
 
