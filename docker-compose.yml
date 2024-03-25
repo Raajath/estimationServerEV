@@ -7,10 +7,10 @@ services:
     ports:
       - 5000:5000
     networks:
-      - charginginfrastructure_asset_network
+      - asset_network
 
 networks:
-  charginginfrastructure_asset_network:
+  asset_network:
     external: true
 
 
